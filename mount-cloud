@@ -1,0 +1,3 @@
+#!/bin/sh
+sshfs planner:backup -ouid=`id -u`,gid=`id -g` .backup_enc
+cat ~/.cloudpass|encfs -S ~/.backup_enc ~/planner
